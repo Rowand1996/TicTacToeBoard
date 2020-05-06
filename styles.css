@@ -6,7 +6,6 @@
 div.row > div {
     height:100px;
     width:100px;
-    color: red;
     float: left;
 }
 
