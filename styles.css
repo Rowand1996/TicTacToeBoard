@@ -7,12 +7,19 @@ div.row > div {
     height:100px;
     width:100px;
     float: left;
+    
 }
+
+div.row > div:hover {
+    cursor: pointer;
+}
+
 
 .row {
     clear: both;
     margin: 0 auto;
     width:302px;
+    
 }
 
 .top {
