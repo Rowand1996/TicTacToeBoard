@@ -36,3 +36,19 @@ div.row > div {
 .right {
     border-left: 1px black solid;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 3em;
+    display:none;
+}
+
+h2 {
+    text-align: center;
+    color:green;
+}

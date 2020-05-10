@@ -24,6 +24,7 @@ function cellClicked() {
             cells[0].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[0].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (cells[3].textContent === cells[4].textContent &&
         cells[4].textContent === cells[5].textContent &&
@@ -31,6 +32,7 @@ function cellClicked() {
             cells[3].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[3].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (cells[6].textContent === cells[7].textContent &&
         cells[7].textContent === cells[8].textContent &&
@@ -38,6 +40,7 @@ function cellClicked() {
             cells[6].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[6].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (cells[0].textContent === cells[4].textContent &&
         cells[4].textContent === cells[8].textContent &&
@@ -45,6 +48,7 @@ function cellClicked() {
             cells[0].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[0].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (cells[2].textContent === cells[4].textContent &&
         cells[4].textContent === cells[6].textContent &&
@@ -52,6 +56,7 @@ function cellClicked() {
             cells[2].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[2].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (cells[0].textContent === cells[3].textContent &&
         cells[3].textContent === cells[6].textContent &&
@@ -59,6 +64,7 @@ function cellClicked() {
             cells[0].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[0].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (cells[1].textContent === cells[4].textContent &&
         cells[4].textContent === cells[7].textContent &&
@@ -66,6 +72,7 @@ function cellClicked() {
             cells[1].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[1].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (cells[2].textContent === cells[5].textContent &&
         cells[5].textContent === cells[8].textContent &&
@@ -73,13 +80,14 @@ function cellClicked() {
             cells[2].textContent === "o")) {
         document.querySelector("h2").innerHTML = cells[2].textContent.toUpperCase() + " HAS WON THE GAME!";
         wonTheGame = true;
+        document.querySelector("button"). style. display = "block";
     }
     if (wonTheGame === false && numOfMoves === 9) {
         document.querySelector("h2").innerHTML = "DRAW PLAY AGAIN!";
-    }
-    function restartGame(){
-        document.location.reload();
+        document.querySelector("button"). style. display = "block";
     }
 }
-
+function restartGame(){
+    document.location.reload();
+}
 
