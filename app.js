@@ -1,5 +1,5 @@
 const cells = document.querySelectorAll("div.row > div");
-for (i = 0; i < cells.length; i++) {
+for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", cellClicked);
 }
 
