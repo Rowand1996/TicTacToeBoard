@@ -3,11 +3,23 @@ for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", cellClicked);
 }
 
+const winConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8]
+];
+
+
 let turn = "x";
 let wonTheGame = false;
 let numOfMoves = 0;
 function cellClicked() {
-    if(event.target.textContent > ""){
+    if (event.target.textContent > "") {
         return
     }
     numOfMoves += 1;
@@ -18,76 +30,25 @@ function cellClicked() {
     else {
         turn = "x";
     }
-    if (cells[0].textContent === cells[1].textContent &&
-        cells[1].textContent === cells[2].textContent &&
-        (cells[0].textContent === "x" ||
-            cells[0].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[0].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
+
+    for (let i = 0; i < winConditions.length; i++) {
+        if (cells[winConditions[i][0]].textContent === cells[winConditions[i][1]].textContent &&
+            cells[winConditions[i][1]].textContent === cells[winConditions[i][2]].textContent &&
+            (cells[winConditions[i][0]].textContent === "x" ||
+                cells[winConditions[i][0]].textContent === "o")) {
+            document.querySelector("h2").innerHTML = cells[2].textContent.toUpperCase() + " HAS WON THE GAME!";
+            wonTheGame = true;
+            document.querySelector("button").style.display = "block";
+        }
     }
-    if (cells[3].textContent === cells[4].textContent &&
-        cells[4].textContent === cells[5].textContent &&
-        (cells[3].textContent === "x" ||
-            cells[3].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[3].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
-    }
-    if (cells[6].textContent === cells[7].textContent &&
-        cells[7].textContent === cells[8].textContent &&
-        (cells[6].textContent === "x" ||
-            cells[6].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[6].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
-    }
-    if (cells[0].textContent === cells[4].textContent &&
-        cells[4].textContent === cells[8].textContent &&
-        (cells[0].textContent === "x" ||
-            cells[0].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[0].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
-    }
-    if (cells[2].textContent === cells[4].textContent &&
-        cells[4].textContent === cells[6].textContent &&
-        (cells[2].textContent === "x" ||
-            cells[2].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[2].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
-    }
-    if (cells[0].textContent === cells[3].textContent &&
-        cells[3].textContent === cells[6].textContent &&
-        (cells[0].textContent === "x" ||
-            cells[0].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[0].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
-    }
-    if (cells[1].textContent === cells[4].textContent &&
-        cells[4].textContent === cells[7].textContent &&
-        (cells[1].textContent === "x" ||
-            cells[1].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[1].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
-    }
-    if (cells[2].textContent === cells[5].textContent &&
-        cells[5].textContent === cells[8].textContent &&
-        (cells[2].textContent === "x" ||
-            cells[2].textContent === "o")) {
-        document.querySelector("h2").innerHTML = cells[2].textContent.toUpperCase() + " HAS WON THE GAME!";
-        wonTheGame = true;
-        document.querySelector("button"). style. display = "block";
-    }
+
     if (wonTheGame === false && numOfMoves === 9) {
         document.querySelector("h2").innerHTML = "DRAW PLAY AGAIN!";
-        document.querySelector("button"). style. display = "block";
+        document.querySelector("button").style.display = "block";
     }
 }
-function restartGame(){
+function restartGame() {
     document.location.reload();
 }
+
 
