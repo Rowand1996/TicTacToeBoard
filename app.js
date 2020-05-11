@@ -1,11 +1,11 @@
-let cells = document.querySelectorAll("div.row > div");
+const cells = document.querySelectorAll("div.row > div");
 for (i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", cellClicked);
 }
 
-var turn = "x";
-var wonTheGame = false;
-var numOfMoves = 0;
+let turn = "x";
+let wonTheGame = false;
+let numOfMoves = 0;
 function cellClicked() {
     if(event.target.textContent > ""){
         return
