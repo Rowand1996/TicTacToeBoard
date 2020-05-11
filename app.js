@@ -36,7 +36,7 @@ function cellClicked() {
             cells[winConditions[i][1]].textContent === cells[winConditions[i][2]].textContent &&
             (cells[winConditions[i][0]].textContent === "x" ||
                 cells[winConditions[i][0]].textContent === "o")) {
-            document.querySelector("h2").innerHTML = cells[2].textContent.toUpperCase() + " HAS WON THE GAME!";
+            document.querySelector("h2").innerHTML = cells[winConditions[i][0]].textContent.toUpperCase() + " HAS WON THE GAME!";
             wonTheGame = true;
             document.querySelector("button").style.display = "block";
         }
