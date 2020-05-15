@@ -6,7 +6,7 @@
 div.row > div {
     height:100px;
     width:100px;
-    float: left;
+    float:left;
     line-height: 100px;
     font-size: 75px;
     cursor: pointer;

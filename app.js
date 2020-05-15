@@ -19,6 +19,9 @@ let turn = "x";
 let wonTheGame = false;
 let numOfMoves = 0;
 function cellClicked() {
+    if(wonTheGame){
+        return
+    }
     if (event.target.textContent > "") {
         return
     }
